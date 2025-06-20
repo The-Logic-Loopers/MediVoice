@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fa;
+  background-image: url(https://www.shutterstock.com/image-photo/clinic-tablet-hands-doctor-patient-260nw-2472677039.jpg);
+    background-size: cover;
+}
+
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #2d4a60;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.sidebar-header {
+  padding: 24px 0 18px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: #24405a;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul li {
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.1rem;
+}
+.sidebar nav ul li.active, .sidebar nav ul li:hover {
+  background: #1e3242;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 18px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.page-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2d4a60;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #2d4a60;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #f9d423;
+}
+
+/* Home Page */
+#homePage {
+  padding: 40px 32px;
+}
+.stats-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 24px 32px;
+  min-width: 160px;
+  text-align: center;
+}
+.stat-card h3 {
+  color: #2d4a60;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+.stat-card p {
+  font-size: 2rem;
+  color: #ff4e50;
+  margin: 0;
+}
+.welcome-msg {
+  background: #eaf6ff;
+  border-radius: 10px;
+  padding: 24px;
+  color: #24405a;
+  font-size: 1.1rem;
+}
+
+/* Appointments Page */
+#appointmentsPage {
+  padding: 40px 32px;
+  max-width: 500px;
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  font-size: 1rem;
+}
+.input-group button {
+  padding: 7px 12px;
+  font-size: 1.1rem;
+  border: none;
+  background: #ff4e50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.input-group button:hover {
+  background: #f9d423;
+  color: #2d4a60;
+}
+#appointmentForm button[type="submit"] {
+  background: #f9d423;
+  color: #333;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  width: 100%;
+}
+#appointmentForm button[type="submit"]:hover {
+  background: #ff4e50;
+  color: #fff;
+}
+.confirmation {
+  color: #27ae60;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+.appointments-list {
+  margin-top: 24px;
+}
+.appointments-list h3 {
+  margin-bottom: 8px;
+}
+.appointment-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  font-size: 0.98rem;
+}
+
+/* Doctors Page */
+#doctorsPage {
+  padding: 40px 32px;
+}
+.doctors-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.doctor-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  min-width: 220px;
+  margin-bottom: 18px;
+}
+.doctor-card img {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border: 2px solid #f9d423;
+}
+.doctor-card h4 {
+  margin: 0 0 6px 0;
+  color: #2d4a60;
+}
+.doctor-card p {
+  margin: 0;
+  color: #888;
+  font-size: 0.98rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .doctors-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    padding-left: 0;
+  }
+  .topbar {
+    padding: 12px 10px;
+  }
+  #homePage, #appointmentsPage, #doctorsPage {
+    padding: 16px 6px;
+  }
+}
